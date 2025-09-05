@@ -29,6 +29,9 @@ roles:
   - name: FR_P_{{ env }}_{{ product }}_ADMIN
   - name: FR_P_{{ env }}_{{ product }}_ENGINEER
   - name: FR_P_{{ env }}_{{ product }}_READER
+  # Access
+  - name: "AR_I_ADLS_PHDATA_SNOWFLAKE_STAGE"
+  - name: "AR_A_TASK_OPERATOR"
 privilegeGrants:
     # Warehouse
     # ADMIN
