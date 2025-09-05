@@ -27,9 +27,6 @@ roles:
   # Functional
   - name: FR_S_{{ env }}_{{ source }}_ADMIN
   - name: FR_S_{{ env }}_{{ source }}_ENGINEER
-  # Access
-  - name: "AR_I_ADLS_PHDATA_SNOWFLAKE_STAGE"
-  - name: "AR_A_TASK_OPERATOR"
 privilegeGrants:
     # Warehouse
   - privilege: "ALL PRIVILEGES"
