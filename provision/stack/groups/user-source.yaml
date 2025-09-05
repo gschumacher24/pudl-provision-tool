@@ -1,0 +1,5 @@
+entries:
+  - env: DEV
+    source: PUDL
+    username: gschumacher2
+    access_level: RO

@@ -1,0 +1,8 @@
+defaults:
+  must_change_password: true
+  rsa_public_key: ""
+  rsa_public_key_2: ""
+  password: "phDataPudl2025!"
+entries:
+  - username: gschumacher2
+    email: "gschumacher.phdata@gmail.com"
