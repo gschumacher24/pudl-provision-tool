@@ -11,10 +11,13 @@ users:
       RSA_PUBLIC_KEY: "'{{ rsa_public_key }}'"
       RSA_PUBLIC_KEY_2: "'{{ rsa_public_key_2 }}'"
 roles:
-    # Data access
+  # Data
   - name: "DR_U_{{ username }}"
-    # Functional access
+  # Functional
   - name: "FR_U_{{ username }}"
+  # Access
+  - name: "AR_I_ADLS_PHDATA_SNOWFLAKE_STAGE"
+  - name: "AR_A_TASK_OPERATOR"
 databases:
   - name: "USER_{{username}}"
 schemas:
