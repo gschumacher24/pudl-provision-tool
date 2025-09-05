@@ -12,8 +12,6 @@ account:
     network_policy: ACCOUNT_NETWORK_POLICY
     max_data_extension_time_in_days: 14
     prevent_unload_to_inline_url: true
-    require_storage_integration_for_stage_creation: true
-    require_storage_integration_for_stage_operation: true
     statement_queued_timeout_in_seconds: 3600 # 1 hour
     statement_timeout_in_seconds: 21600 # 6 hours
     timezone: UTC
