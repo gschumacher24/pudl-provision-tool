@@ -1,2 +1,2 @@
 # pudl-provision-tool
-Provision Tool project for PUDL 
+Provision Tool for PUDL project

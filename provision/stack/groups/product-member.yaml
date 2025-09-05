@@ -1,0 +1,5 @@
+entries:
+  - env: DEV
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: tfokken
+    function: ADMIN
