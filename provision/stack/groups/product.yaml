@@ -8,3 +8,7 @@ defaults:
 entries:
   - env: DEV
     product: PUBLIC_ENERGY_ANALYTICS
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
