@@ -3,3 +3,11 @@ entries:
     source: PUDL
     function: ADMIN
     username: gschumacher2
+  - env: QA
+    source: PUDL
+    function: ADMIN
+    username: gschumacher2
+  - env: PROD
+    source: PUDL
+    function: ADMIN
+    username: gschumacher2

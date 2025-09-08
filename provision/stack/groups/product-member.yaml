@@ -3,3 +3,11 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
     function: ADMIN
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: gschumacher2
+    function: ADMIN
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: gschumacher2
+    function: ADMIN
