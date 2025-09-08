@@ -3,3 +3,7 @@ entries:
     username: gschumacher2
   - admin_role: SECURITYADMIN
     username: gschumacher2
+  - admin_role: SYSADMIN
+    username: dkelley
+  - admin_role: SECURITYADMIN
+    username: dkelley
