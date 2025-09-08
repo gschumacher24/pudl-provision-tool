@@ -8,3 +8,7 @@ defaults:
 entries:
   - env: DEV
     source: PUDL
+  - env: QA
+    source: PUDL
+  - env: PROD
+    source: PUDL
