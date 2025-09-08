@@ -5,7 +5,9 @@ schemas:
     database: "S_{{ env }}_{{ source }}"
   - name: RAW
     database: "S_{{ env }}_{{ source }}"
-  - name: STG
+  - name: STAGING
+    database: "S_{{ env }}_{{ source }}"
+  - name: INTERMEDIATE
     database: "S_{{ env }}_{{ source }}"
 warehouses:
   - name: "S_{{ env }}_{{ source }}_WH"
