@@ -3,3 +3,11 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     source: PUDL
     access_level: RO
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    source: PUDL
+    access_level: RO
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    source: PUDL
+    access_level: RO
