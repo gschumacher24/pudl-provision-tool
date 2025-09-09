@@ -15,9 +15,6 @@ roles:
   - name: "DR_U_{{ username }}"
   # Functional
   - name: "FR_U_{{ username }}"
-  # Access
-#  - name: "AR_I_ADLS_PHDATA_SNOWFLAKE_STAGE"
-#  - name: "AR_A_TASK_OPERATOR"
 databases:
   - name: "USER_{{username}}"
 schemas:
