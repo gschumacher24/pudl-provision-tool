@@ -23,6 +23,10 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     username: jnowak
     function: READER
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: nhauschild
+    function: READER
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
@@ -34,4 +38,8 @@ entries:
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: jnowak
+    function: READER
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: nhauschild
     function: READER
