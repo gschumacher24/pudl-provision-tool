@@ -21,16 +21,8 @@ entries:
     username: dkelley
   - env: QA
     source: PUDL
-    function: READER
+    function: ENGINEER
     username: jnowak
-  - env: QA
-    source: PUDL
-    function: READER
-    username: nhauschild
-  - env: QA
-    source: PUDL
-    function: READER
-    username: eruter
   - env: PROD
     source: PUDL
     function: ADMIN
@@ -41,13 +33,5 @@ entries:
     username: dkelley
   - env: PROD
     source: PUDL
-    function: READER
+    function: ENGINEER
     username: jnowak
-  - env: PROD
-    source: PUDL
-    function: READER
-    username: nhauschild
-  - env: PROD
-    source: PUDL
-    function: READER
-    username: eruter
