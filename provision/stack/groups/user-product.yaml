@@ -7,3 +7,7 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     username: dkelley
     access_level: RO
+  - env: DEV
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: jnowak
+    access_level: RO

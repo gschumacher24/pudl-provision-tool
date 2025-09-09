@@ -7,6 +7,10 @@ entries:
     source: PUDL
     function: ADMIN
     username: dkelley
+  - env: DEV
+    source: PUDL
+    function: ENGINEER
+    username: jnowak
   - env: QA
     source: PUDL
     function: ADMIN
@@ -15,6 +19,10 @@ entries:
     source: PUDL
     function: ADMIN
     username: dkelley
+  - env: QA
+    source: PUDL
+    function: READER
+    username: jnowak
   - env: PROD
     source: PUDL
     function: ADMIN
@@ -23,3 +31,7 @@ entries:
     source: PUDL
     function: ADMIN
     username: dkelley
+  - env: PROD
+    source: PUDL
+    function: READER
+    username: jnowak
