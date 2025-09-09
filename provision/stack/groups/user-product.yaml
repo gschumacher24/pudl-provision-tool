@@ -3,3 +3,7 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
     access_level: RO
+  - env: DEV
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: dkelley
+    access_level: RO
