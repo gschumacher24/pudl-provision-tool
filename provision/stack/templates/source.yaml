@@ -1,13 +1,11 @@
 databases:
   - name: "S_{{ env }}_{{ source }}"
 schemas:
-  - name: SHARED
+  - name: BRONZE
     database: "S_{{ env }}_{{ source }}"
-  - name: RAW
+  - name: SILVER
     database: "S_{{ env }}_{{ source }}"
-  - name: STAGING
-    database: "S_{{ env }}_{{ source }}"
-  - name: INTERMEDIATE
+  - name: GOLD
     database: "S_{{ env }}_{{ source }}"
 warehouses:
   - name: "S_{{ env }}_{{ source }}_WH"
