@@ -15,3 +15,5 @@ entries:
   # Demo
   - env: DEV
     source: DEMO_PRACTICE
+  - env: DEV
+    source: DEMO
