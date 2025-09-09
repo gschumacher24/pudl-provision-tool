@@ -12,3 +12,6 @@ entries:
     source: PUDL
   - env: PROD
     source: PUDL
+  # Demo
+  - env: DEV
+    source: DEMO_PRACTICE
