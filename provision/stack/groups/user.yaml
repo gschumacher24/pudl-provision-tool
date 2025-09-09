@@ -4,5 +4,15 @@ defaults:
   rsa_public_key_2: ""
   password: "phDataPudl2025!"
 entries:
+  # Technical Team
   - username: gschumacher2
     email: "gschumacher.phdata@gmail.com"
+  - username: dkelley
+    email: "dkelley@phdata.io"
+  - username: jnowak
+    email: "jnowak@phdata.io"
+  # Stakeholders
+  - username: nhauschild
+    email: "nhauschild@phdata.io"
+  - username: eruter
+    email: "eruter@phdata.io"

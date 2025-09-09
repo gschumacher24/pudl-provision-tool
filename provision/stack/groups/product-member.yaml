@@ -3,11 +3,51 @@ entries:
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
     function: ADMIN
+  - env: DEV
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: dkelley
+    function: ADMIN
+  - env: DEV
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: jnowak
+    function: ENGINEER
   - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: gschumacher2
+    function: ADMIN
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: dkelley
+    function: ADMIN
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: jnowak
+    function: READER
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: nhauschild
+    function: READER
+  - env: QA
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: eruter
+    function: READER
+  - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
     function: ADMIN
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
-    username: gschumacher2
+    username: dkelley
     function: ADMIN
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: jnowak
+    function: READER
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: nhauschild
+    function: READER
+  - env: PROD
+    product: PUBLIC_ENERGY_ANALYTICS
+    username: eruter
+    function: READER

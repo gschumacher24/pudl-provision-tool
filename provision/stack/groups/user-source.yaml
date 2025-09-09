@@ -3,3 +3,11 @@ entries:
     source: PUDL
     username: gschumacher2
     access_level: RO
+  - env: DEV
+    source: PUDL
+    username: dkelley
+    access_level: RO
+  - env: DEV
+    source: PUDL
+    username: jnowak
+    access_level: RO

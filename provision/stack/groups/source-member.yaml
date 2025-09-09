@@ -3,11 +3,51 @@ entries:
     source: PUDL
     function: ADMIN
     username: gschumacher2
+  - env: DEV
+    source: PUDL
+    function: ADMIN
+    username: dkelley
+  - env: DEV
+    source: PUDL
+    function: ENGINEER
+    username: jnowak
   - env: QA
+    source: PUDL
+    function: ADMIN
+    username: gschumacher2
+  - env: QA
+    source: PUDL
+    function: ADMIN
+    username: dkelley
+  - env: QA
+    source: PUDL
+    function: READER
+    username: jnowak
+  - env: QA
+    source: PUDL
+    function: READER
+    username: nhauschild
+  - env: QA
+    source: PUDL
+    function: READER
+    username: eruter
+  - env: PROD
     source: PUDL
     function: ADMIN
     username: gschumacher2
   - env: PROD
     source: PUDL
     function: ADMIN
-    username: gschumacher2
+    username: dkelley
+  - env: PROD
+    source: PUDL
+    function: READER
+    username: jnowak
+  - env: PROD
+    source: PUDL
+    function: READER
+    username: nhauschild
+  - env: PROD
+    source: PUDL
+    function: READER
+    username: eruter
