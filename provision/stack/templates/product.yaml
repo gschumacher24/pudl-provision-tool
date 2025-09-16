@@ -26,7 +26,6 @@ roles:
   - name: DR_P_{{ env }}_{{ product }}_RO
   - name: DR_P_{{ env }}_{{ product }}_SHARED
   # Functional
-  - name: FR_P_{{ env }}_{{ product }}_ADMIN
   - name: FR_P_{{ env }}_{{ product }}_ENGINEER
   - name: FR_P_{{ env }}_{{ product }}_READER
 privilegeGrants:
@@ -44,11 +43,11 @@ privilegeGrants:
     roleName: "AR_P_{{ env }}_{{ product }}_WH"
     grantOption: false
     # Database
-    # ADMIN
+    # ENGINEER
   - privilege: "ALL PRIVILEGES"
     objectType: "DATABASE"
     objectName: "P_{{ env }}_{{ product }}"
-    roleName: "FR_P_{{ env }}_{{ product }}_ADMIN"
+    roleName: "FR_P_{{ env }}_{{ product }}_ENGINEER"
     grantOption: true
     # USER
   - privilege: "USAGE"
@@ -247,8 +246,5 @@ roleGrants:
     toRoles:
       - "FR_P_{{ env }}_{{ product }}_ENGINEER"
   - name: "FR_P_{{ env }}_{{ product }}_ENGINEER"
-    toRoles:
-      - "FR_P_{{ env }}_{{ product }}_ADMIN"
-  - name: "FR_P_{{ env }}_{{ product }}_ADMIN"
     toRoles:
       - "SYSADMIN"

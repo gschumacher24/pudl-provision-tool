@@ -2,11 +2,11 @@ entries:
   - env: DEV
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
-    function: ADMIN
+    function: ENGINEER
   - env: DEV
     product: PUBLIC_ENERGY_ANALYTICS
     username: dkelley
-    function: ADMIN
+    function: ENGINEER
   - env: DEV
     product: PUBLIC_ENERGY_ANALYTICS
     username: jnowak
@@ -14,11 +14,11 @@ entries:
   - env: QA
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
-    function: ADMIN
+    function: ENGINEER
   - env: QA
     product: PUBLIC_ENERGY_ANALYTICS
     username: dkelley
-    function: ADMIN
+    function: ENGINEER
   - env: QA
     product: PUBLIC_ENERGY_ANALYTICS
     username: jnowak
@@ -34,11 +34,11 @@ entries:
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: gschumacher2
-    function: ADMIN
+    function: ENGINEER
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: dkelley
-    function: ADMIN
+    function: ENGINEER
   - env: PROD
     product: PUBLIC_ENERGY_ANALYTICS
     username: jnowak
