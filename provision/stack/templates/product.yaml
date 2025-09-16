@@ -5,8 +5,6 @@ schemas:
     database: "P_{{ env }}_{{ product }}"
   - name: INTEGRATION
     database: "P_{{ env }}_{{ product }}"
-  - name: SHARED
-    database: "P_{{ env }}_{{ product }}"
 warehouses:
   - name: "P_{{ env }}_{{ product }}_WH"
     properties:
@@ -24,7 +22,6 @@ roles:
   # Data
   - name: DR_P_{{ env }}_{{ product }}_RW
   - name: DR_P_{{ env }}_{{ product }}_RO
-  - name: DR_P_{{ env }}_{{ product }}_SHARED
   # Functional
   - name: FR_P_{{ env }}_{{ product }}_ENGINEER
   - name: FR_P_{{ env }}_{{ product }}_READER
@@ -60,11 +57,6 @@ privilegeGrants:
     objectName: "P_{{ env }}_{{ product }}"
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
     grantOption: false
-  - privilege: "USAGE"
-    objectType: "DATABASE"
-    objectName: "P_{{ env }}_{{ product }}"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
-    grantOption: false
     # Schema
     # ADMIN
   - privilege: "ALL PRIVILEGES"
@@ -78,11 +70,6 @@ privilegeGrants:
     objectName: "P_{{ env }}_{{ product }}"
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
     grantOption: false
-  - privilege: "USAGE"
-    objectType: "SCHEMA"
-    objectName: "P_{{ env }}_{{ product }}.SHARED"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
-    grantOption: false
     # Table
   - privilege: "ALL PRIVILEGES"
     objectType: "TABLES"
@@ -94,12 +81,6 @@ privilegeGrants:
     objectType: "TABLES"
     objectName: "DATABASE P_{{ env }}_{{ product }}"
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
-    future: true
-    grantOption: false
-  - privilege: "SELECT"
-    objectType: "TABLES"
-    objectName: "SCHEMA P_{{ env }}_{{ product }}.SHARED"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
     future: true
     grantOption: false
     # External Table
@@ -115,12 +96,6 @@ privilegeGrants:
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
     future: true
     grantOption: false
-  - privilege: "SELECT"
-    objectType: "EXTERNAL TABLES"
-    objectName: "SCHEMA P_{{ env }}_{{ product }}.SHARED"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
-    future: true
-    grantOption: false
     # View
   - privilege: "ALL PRIVILEGES"
     objectType: "VIEWS"
@@ -134,12 +109,6 @@ privilegeGrants:
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
     future: true
     grantOption: false
-  - privilege: "SELECT"
-    objectType: "VIEWS"
-    objectName: "SCHEMA P_{{ env }}_{{ product }}.SHARED"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
-    future: true
-    grantOption: false
     # Materialized View
   - privilege: "ALL PRIVILEGES"
     objectType: "MATERIALIZED VIEWS"
@@ -151,12 +120,6 @@ privilegeGrants:
     objectType: "MATERIALIZED VIEWS"
     objectName: "DATABASE P_{{ env }}_{{ product }}"
     roleName: "DR_P_{{ env }}_{{ product }}_RO"
-    future: true
-    grantOption: false
-  - privilege: "SELECT"
-    objectType: "MATERIALIZED VIEWS"
-    objectName: "SCHEMA P_{{ env }}_{{ product }}.SHARED"
-    roleName: "DR_P_{{ env }}_{{ product }}_SHARED"
     future: true
     grantOption: false
     # Stream
@@ -233,9 +196,6 @@ roleGrants:
   - name: "AR_P_{{ env }}_{{ product }}_WH_ADMIN"
     toRoles:
       - "FR_P_{{ env }}_{{ product }}_ENGINEER"
-  - name: "DR_P_{{ env }}_{{ product }}_SHARED"
-    toRoles:
-      - "DR_P_{{ env }}_{{ product }}_RO"
   - name: "DR_P_{{ env }}_{{ product }}_RO"
     toRoles:
       - "DR_P_{{ env }}_{{ product }}_RW"
