@@ -19,19 +19,28 @@ warehouses:
       MAX_CLUSTER_COUNT: "{{ max_cluster_count }}"
 roles:
   # Warehouse
+  - name: AR_S_{{ env }}_{{ source }}_WH
   - name: AR_S_{{ env }}_{{ source }}_WH_ADMIN
   # Data 
   - name: DR_S_{{ env }}_{{ source }}_RW
   - name: DR_S_{{ env }}_{{ source }}_RO
   # Functional
   - name: FR_S_{{ env }}_{{ source }}_ENGINEER
+  - name: FR_S_{{ env }}_{{ source }}_READER
 privilegeGrants:
     # Warehouse
+    # ADMIN
   - privilege: "ALL PRIVILEGES"
     objectType: "WAREHOUSE"
     objectName: "S_{{ env }}_{{ source }}_WH"
     roleName: "AR_S_{{ env }}_{{ source }}_WH_ADMIN"
     grantOption: true
+    # USER
+  - privilege: "USAGE"
+    objectType: "WAREHOUSE"
+    objectName: "S_{{ env }}_{{ source }}_WH"
+    roleName: "AR_S_{{ env }}_{{ source }}_WH"
+    grantOption: false
     # Database
     # ENGINEER
   - privilege: "ALL PRIVILEGES"
@@ -190,6 +199,9 @@ privilegeGrants:
     future: true
     grantOption: false
 roleGrants:
+  - name: "AR_S_{{ env }}_{{ source }}_WH"
+    toRoles:
+      - "FR_S_{{ env }}_{{ source }}_READER"
   - name: "AR_S_{{ env }}_{{ source }}_WH_ADMIN"
     toRoles:
       - "FR_S_{{ env }}_{{ source }}_ENGINEER"
@@ -202,6 +214,9 @@ roleGrants:
   - name: "DR_S_{{ env }}_{{ source }}_RO"
     toRoles:
       - "DR_S_{{ env }}_{{ source }}_RW"
+  - name: "DR_S_{{ env }}_{{ source }}_RO"
+    toRoles:
+      - "FR_S_{{ env }}_{{ source }}_READER"
   - name: "DR_S_{{ env }}_{{ source }}_RW"
     toRoles:
       - "FR_S_{{ env }}_{{ source }}_ENGINEER"
