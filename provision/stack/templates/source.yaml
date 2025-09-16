@@ -7,8 +7,6 @@ schemas:
     database: "S_{{ env }}_{{ source }}"
   - name: GOLD
     database: "S_{{ env }}_{{ source }}"
-  - name: SHARED
-    database: "S_{{ env }}_{{ source }}"
 warehouses:
   - name: "S_{{ env }}_{{ source }}_WH"
     properties:
@@ -25,9 +23,7 @@ roles:
   # Data 
   - name: DR_S_{{ env }}_{{ source }}_RW
   - name: DR_S_{{ env }}_{{ source }}_RO
-  - name: DR_S_{{ env }}_{{ source }}_SHARED
   # Functional
-  - name: FR_S_{{ env }}_{{ source }}_ADMIN
   - name: FR_S_{{ env }}_{{ source }}_ENGINEER
 privilegeGrants:
     # Warehouse
@@ -37,11 +33,11 @@ privilegeGrants:
     roleName: "AR_S_{{ env }}_{{ source }}_WH_ADMIN"
     grantOption: true
     # Database
-    # ADMIN
+    # ENGINEER
   - privilege: "ALL PRIVILEGES"
     objectType: "DATABASE"
     objectName: "S_{{ env }}_{{ source }}"
-    roleName: "FR_S_{{ env }}_{{ source }}_ADMIN"
+    roleName: "FR_S_{{ env }}_{{ source }}_ENGINEER"
     grantOption: true
     # USER
   - privilege: "USAGE"
@@ -53,14 +49,9 @@ privilegeGrants:
     objectType: "DATABASE"
     objectName: "S_{{ env }}_{{ source }}"
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
-    grantOption: false
-  - privilege: "USAGE"
-    objectType: "DATABASE"
-    objectName: "S_{{ env }}_{{ source }}"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
     grantOption: false
     # Schema
-    # ADMIN
+    # RW
   - privilege: "ALL PRIVILEGES"
     objectType: "ALL SCHEMAS IN DATABASE"
     objectName: "S_{{ env }}_{{ source }}"
@@ -71,11 +62,6 @@ privilegeGrants:
     objectType: "ALL SCHEMAS IN DATABASE"
     objectName: "S_{{ env }}_{{ source }}"
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
-    grantOption: false
-  - privilege: "USAGE"
-    objectType: "SCHEMA"
-    objectName: "S_{{ env }}_{{ source }}.SHARED"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
     grantOption: false
     # Table
   - privilege: "ALL PRIVILEGES"
@@ -88,12 +74,6 @@ privilegeGrants:
     objectType: "TABLES"
     objectName: "DATABASE S_{{ env }}_{{ source }}"
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
-    future: true
-    grantOption: false
-  - privilege: "SELECT"
-    objectType: "TABLES"
-    objectName: "SCHEMA S_{{ env }}_{{ source }}.SHARED"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
     future: true
     grantOption: false
     # External Table
@@ -109,12 +89,6 @@ privilegeGrants:
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
     future: true
     grantOption: false
-  - privilege: "SELECT"
-    objectType: "EXTERNAL TABLES"
-    objectName: "SCHEMA S_{{ env }}_{{ source }}.SHARED"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
-    future: true
-    grantOption: false
     # View
   - privilege: "ALL PRIVILEGES"
     objectType: "VIEWS"
@@ -128,12 +102,6 @@ privilegeGrants:
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
     future: true
     grantOption: false
-  - privilege: "SELECT"
-    objectType: "VIEWS"
-    objectName: "SCHEMA S_{{ env }}_{{ source }}.SHARED"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
-    future: true
-    grantOption: false
     # Materialized View
   - privilege: "ALL PRIVILEGES"
     objectType: "MATERIALIZED VIEWS"
@@ -145,12 +113,6 @@ privilegeGrants:
     objectType: "MATERIALIZED VIEWS"
     objectName: "DATABASE S_{{ env }}_{{ source }}"
     roleName: "DR_S_{{ env }}_{{ source }}_RO"
-    future: true
-    grantOption: false
-  - privilege: "SELECT"
-    objectType: "MATERIALIZED VIEWS"
-    objectName: "SCHEMA S_{{ env }}_{{ source }}.SHARED"
-    roleName: "DR_S_{{ env }}_{{ source }}_SHARED"
     future: true
     grantOption: false
     # Pipe 
@@ -237,9 +199,6 @@ roleGrants:
   - name: "AR_I_ADLS_PHDATA_SNOWFLAKE_STAGE"
     toRoles:
       - "FR_S_{{ env }}_{{ source }}_ENGINEER"
-  - name: "DR_S_{{ env }}_{{ source }}_SHARED"
-    toRoles:
-      - "DR_S_{{ env }}_{{ source }}_RO"
   - name: "DR_S_{{ env }}_{{ source }}_RO"
     toRoles:
       - "DR_S_{{ env }}_{{ source }}_RW"
@@ -247,8 +206,5 @@ roleGrants:
     toRoles:
       - "FR_S_{{ env }}_{{ source }}_ENGINEER"
   - name: "FR_S_{{ env }}_{{ source }}_ENGINEER"
-    toRoles:
-      - "FR_S_{{ env }}_{{ source }}_ADMIN"
-  - name: "FR_S_{{ env }}_{{ source }}_ADMIN"
     toRoles:
       - "SYSADMIN"

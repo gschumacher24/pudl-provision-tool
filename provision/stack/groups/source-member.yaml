@@ -1,11 +1,11 @@
 entries:
   - env: DEV
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: gschumacher2
   - env: DEV
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: dkelley
   - env: DEV
     source: PUDL
@@ -13,11 +13,11 @@ entries:
     username: jnowak
   - env: QA
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: gschumacher2
   - env: QA
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: dkelley
   - env: QA
     source: PUDL
@@ -25,11 +25,11 @@ entries:
     username: jnowak
   - env: PROD
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: gschumacher2
   - env: PROD
     source: PUDL
-    function: ADMIN
+    function: ENGINEER
     username: dkelley
   - env: PROD
     source: PUDL
